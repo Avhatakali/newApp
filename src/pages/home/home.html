@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Headline</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-content>
+
+    <!-- <button ion-button secondary  (click)="btn('business')">Toggle Menu</button> -->
+
+  <ion-card class="Headlines" *ngFor="let i of newsArr">
+
+     <ion-card-header class="headings">
+       {{i.publishedAt}} <br>
+      {{i.title}}
+    </ion-card-header> 
+  
+    <ion-card-content class="images"  (click)="stories()">
+          <img src= "{{i.urlToImage}}">
+        
+    </ion-card-content>
+
+  </ion-card> 
+</ion-content>
