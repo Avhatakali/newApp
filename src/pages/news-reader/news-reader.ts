@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
+import newsArr from '../../app/newsArr';
+import { news } from '../../app/news';
 
 /**
  * Generated class for the NewsReaderPage page.
@@ -16,23 +18,14 @@ import { NewsProvider } from '../../providers/news/news';
 })
 export class NewsReaderPage {
 
-  newsarr = [];
-  headline;
-  news = [];
-  category =  this.navParams.get("category");
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private NewsProvider:NewsProvider) {
   
-  this.NewsProvider.getMessages(this.category).then((data:any)=>{
 
-    console.log(data);
+  Arr = newsArr;
+  
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private NewsProvider:NewsProvider) {
 
-    for (let index = 0; index < 10; index++) {
-     
-      this.newsarr.push(data.articles[index]);
-      
-        }
-    })
-  }
+   }
 
 }

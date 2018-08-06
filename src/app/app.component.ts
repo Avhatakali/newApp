@@ -4,10 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { DisplayPage } from '../pages/display/display';
 import { NewsReaderPage } from '../pages/news-reader/news-reader';
 import { NewsVidzPage } from '../pages/news-vidz/news-vidz';
+import { TopstoriesPage } from '../pages/topstories/topstories';
+import { SouthPage } from '../pages/south/south';
+import { SportsPage } from '../pages/sports/sports';
+import { PoliticsPage } from '../pages/politics/politics';
+import { AfricaPage } from '../pages/africa/africa';
+import { WorldPage } from '../pages/world/world';
+import { BusinessPage } from '../pages/business/business';
 
 
 @Component({
@@ -26,15 +32,15 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
 
-      { title: 'News', component: HomePage },
-      { title: 'Topstories', component: ListPage },
-      { title: 'South Africa', component: NewsReaderPage },
-      { title: 'Africa', component: NewsReaderPage },
-      { title: 'world', component: NewsReaderPage },
-      { title: 'Sport', component: NewsReaderPage },
-      { title: 'Politics', component: NewsReaderPage },
+      { title: 'Topstories', component: TopstoriesPage },
+      { title: 'South Africa', component: SouthPage },
+      { title: 'Africa', component: AfricaPage },
+      { title: 'world', component: WorldPage },
+      { title: 'Sports', component: SportsPage },
+      { title: 'Politics', component: PoliticsPage },
+      { title: 'Business', component: BusinessPage },
       { title: 'video', component: NewsVidzPage },
-      { title: 'Settings', component: DisplayPage },
+     
 
     ];
 

@@ -14,6 +14,13 @@ import { DisplayPage } from '../pages/display/display';
 import { NewsProvider } from '../providers/news/news';
 import { NewsReaderPage } from '../pages/news-reader/news-reader';
 import { NewsVidzPage } from '../pages/news-vidz/news-vidz';
+import { TopstoriesPage } from '../pages/topstories/topstories';
+import { SouthPage } from '../pages/south/south';
+import { PoliticsPage } from '../pages/politics/politics';
+import { SportsPage } from '../pages/sports/sports';
+import { WorldPage } from '../pages/world/world';
+import { AfricaPage } from '../pages/africa/africa';
+import { BusinessPage } from '../pages/business/business';
 
 
 @NgModule({
@@ -23,7 +30,14 @@ import { NewsVidzPage } from '../pages/news-vidz/news-vidz';
     ListPage,
     DisplayPage,
     NewsReaderPage,
-    NewsVidzPage
+    NewsVidzPage,
+    TopstoriesPage,
+    SouthPage,
+    PoliticsPage,
+    SportsPage,
+    WorldPage,
+    AfricaPage,
+    BusinessPage
     
   ],
   imports: [
@@ -38,7 +52,15 @@ import { NewsVidzPage } from '../pages/news-vidz/news-vidz';
     ListPage,
     DisplayPage,
     NewsReaderPage,
-    NewsVidzPage
+    NewsVidzPage,
+    TopstoriesPage,
+    SouthPage,
+    PoliticsPage,
+    SportsPage,
+    WorldPage,
+    AfricaPage,
+    BusinessPage
+
   ],
   providers: [
     StatusBar,

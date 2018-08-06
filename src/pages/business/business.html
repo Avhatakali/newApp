@@ -1,0 +1,31 @@
+<!--
+  Generated template for the BusinessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle> 
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+    <ion-title>business</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card-content class="Headlines" *ngFor="let i of newsArr, let u = index">
+    
+        <h4 item-right clear class="headings" (click)="more(u)">
+          {{i.title}}
+          {{i.decription}}
+        </h4> 
+      
+        <img src= "{{i.urlToImage}}">
+        
+    </ion-card-content>
+</ion-content>

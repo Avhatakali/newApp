@@ -3,27 +3,23 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Headline</ion-title>
+    <ion-title>Headlines</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="clearfix">
 
-<ion-content>
+  <ion-card-content class="Headlines" *ngFor="let i of newsArr, let u = index">
 
-    <!-- <button ion-button secondary  (click)="btn('business')">Toggle Menu</button> -->
-
-  <ion-card class="Headlines" *ngFor="let i of newsArr">
-
-     <ion-card-header class="headings">
-       {{i.publishedAt}} <br>
-      {{i.title}}
-    </ion-card-header> 
-  
-    <ion-card-content class="images"  (click)="stories()">
+        <h4 item-right clear class="headings" (click)="more(u)">
+          {{i.publishedAt}}
+          {{i.title}}
+          {{i.decription}}
+        </h4> 
+      <ion-thumbnail>
           <img src= "{{i.urlToImage}}">
+      </ion-thumbnail>
         
     </ion-card-content>
 
-  </ion-card> 
 </ion-content>

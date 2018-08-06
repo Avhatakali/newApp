@@ -10,6 +10,8 @@ import { NewsReaderPage } from '../news-reader/news-reader';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
+
 export class HomePage {
 
   img;
@@ -38,8 +40,8 @@ export class HomePage {
           for (var i = 1; i < 20; i++) {
           this.newsArr.push(data.articles[i]);
 
-    }
-});
+              }
+       });
   
   }
 
@@ -47,21 +49,9 @@ export class HomePage {
     console.log();
   }
 
-  btn(cat){
-    this.navCtrl.setRoot(DisplayPage, {category:cat})
+  more(u){
+        this.newsArr.splice(0,1,u);  
+        this.navCtrl.push(DisplayPage);
   }
 
-stories(){
-  this.navCtrl.push(NewsReaderPage);
-}
-
-
-// show(i){
-//   this.navCtrl.push(HomePage, {obj:i});
-// }
-
-// toTop(){
-//   this.navCtrl.push(HomePage);
- 
-// }
 }
