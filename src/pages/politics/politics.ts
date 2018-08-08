@@ -16,10 +16,9 @@ import { NewsProvider } from '../../providers/news/news';
   templateUrl: 'politics.html',
 })
 export class PoliticsPage {
+  obj = this.navParams.get('obj')
   newsArr = [];
-  headline;
   
-
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private NewsProvider:NewsProvider) {

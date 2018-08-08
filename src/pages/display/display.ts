@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
 import { NewsReaderPage } from '../news-reader/news-reader';
+import arrFind from '../../app/arrayLocate';
+import newsArr from '../../app/newsArr';
+import { news } from '../../app/news';
+
 
 /**
  * Generated class for the DisplayPage page.
@@ -15,17 +19,21 @@ import { NewsReaderPage } from '../news-reader/news-reader';
   selector: 'page-display',
   templateUrl: 'display.html',
 })
+
 export class DisplayPage {
 
-  newsarr = [];
- 
-  category =  this.navParams.get("category");
+
+  
+
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private NewsProvider:NewsProvider) {
   
-   }
+    }
+
+    ionViewLoad(){
+      
+    }
 
 }
-  
-

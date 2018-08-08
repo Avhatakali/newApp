@@ -1,3 +1,17 @@
 page-news-reader {
 
+    .News{
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+        transition: width 2s, height 2s, transform 2s;
+        -webkit-transition: width 3s;
+        -webkit-transition-delay: 1s; 
+        transition: width 3s;
+        transition-delay: 1s;
+        text-align: center; 
+        align-items: center;       
+    }
+
+    .News:hover{
+        widows: 100%;
+    }
 }

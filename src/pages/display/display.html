@@ -17,5 +17,16 @@
 </ion-header>
 
 <ion-content padding>
- 
+    <ion-card-content class="Headlines" *ngFor="let i of newsArr">
+        <ion-item>       
+            <h4 item-right class="headings">
+                  {{i.title}} <br>
+                  <p> {{i.publishedAt}} </p>
+            </h4> 
+
+              <ion-thumbnail class="img" style="width: 45px; height: 30px;">
+                  <img src= "{{i.urlToImage}}">
+              </ion-thumbnail>
+          </ion-item>
+    </ion-card-content>
 </ion-content>

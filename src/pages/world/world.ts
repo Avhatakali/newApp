@@ -15,7 +15,7 @@ import { NewsProvider } from '../../providers/news/news';
   templateUrl: 'world.html',
 })
 export class WorldPage {
-
+  obj = this.navParams.get('obj')
 newsArr = [];  
 
   constructor(public navCtrl: NavController,

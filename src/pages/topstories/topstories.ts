@@ -5,6 +5,7 @@ import { DisplayPage } from '../display/display';
 import { NewsReaderPage } from '../news-reader/news-reader';
 import newsArr from '../../app/newsArr';
 import { news } from '../../app/news';
+import arrFind from '../../app/arrayLocate';
 
 
 /**
@@ -37,7 +38,7 @@ export class TopstoriesPage {
 
     
     this.NewsProvider.getMessages(this.newsArr).then((data:any)=>{
-
+      console.log(arrFind);
       console.log(data);
       this.dt = data.articles;
     
@@ -56,10 +57,18 @@ export class TopstoriesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopstoriesPage');
+    console.log(arrFind);
   }
 
-      more(){
-        this.navCtrl.push(NewsReaderPage);
-    }  
+  more(u){
+
+    console.log(u);
+      arrFind.splice(0,1,u);
+
+      if(arrFind != null){
+      this.navCtrl.push(NewsReaderPage, {obj:u});
+      
+       }
+    }
 
 }

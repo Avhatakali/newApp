@@ -4,6 +4,9 @@ import { NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
 import { DisplayPage } from '../display/display';
 import { NewsReaderPage } from '../news-reader/news-reader';
+import arrFind from '../../app/arrayLocate';
+import newsArr from '../../app/newsArr';
+
 
 
 @Component({
@@ -14,14 +17,16 @@ import { NewsReaderPage } from '../news-reader/news-reader';
 
 export class HomePage {
 
+  obj = this.navParams.get('obj')
+  newsArr = [];
   img;
   dt;
+  title;
   text;
   date;
   description;
-
-  newsArr = [];
- 
+  url;
+  Arr = newsArr  ;
 
   constructor(public navCtrl: NavController,  
       public navParams: NavParams,
@@ -37,21 +42,26 @@ export class HomePage {
           this.date = this.dt[0].publishedAt;
           this.description = this.dt[0].description;
           
-          for (var i = 1; i < 20; i++) {
-          this.newsArr.push(data.articles[i]);
-
+          for (var i = 0; i < 15; i++) {
+              this.newsArr.push(data.articles[i]);
               }
        });
   
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(){
     console.log();
+
   }
 
   more(u){
-        this.newsArr.splice(0,1,u);  
-        this.navCtrl.push(DisplayPage);
-  }
 
+    console.log(u);
+      arrFind.splice(0,1,u);
+
+      if(arrFind != null){
+      this.navCtrl.push(NewsReaderPage, {obj:u});
+      
+       }
+    }
 }

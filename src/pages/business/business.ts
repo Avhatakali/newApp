@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
+import arrFind from '../../app/arrayLocate';
+import { NewsReaderPage } from '../news-reader/news-reader';
+
 
 /**
  * Generated class for the BusinessPage page.
@@ -49,5 +52,16 @@ export class BusinessPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BusinessPage');
   }
+
+  more(u){
+
+    console.log(u);
+      arrFind.splice(0,1,u);
+
+      if(arrFind != null){
+      this.navCtrl.push(NewsReaderPage, {obj:u});
+      
+       }
+    }  
 
 }

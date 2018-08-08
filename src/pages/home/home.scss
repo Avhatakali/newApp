@@ -1,21 +1,30 @@
 page-home {
 
     .headings{
-        font-size: 24px bold black;
+        font-size: 16px bold black;
+    }
+
+    
+
+    .clearfix{
+        width: 100%;
+    }
+
+    .img{
+        padding: 4px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
     }
 
     .Headlines{
-        text-align: center;
-    }
+       
 
+    }
+    
     .Headlines:hover{
-        background-color: aliceblue;
-    }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+    background-color: aliceblue;
+    }    
 
 }

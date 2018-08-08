@@ -17,20 +17,15 @@
 </ion-header>
 
 
-<ion-content padding *ngFor="let i of newsArr">
+<ion-content padding>
 
-  <ion-card>
-    <header>
-        <h1> {{i.title}}</h1>
-    </header>
-
-    <article>
-        <img src= "{{i.urlToImage}}">
-        <p>
-          {{i.article}}
-        </p>
-    </article>
-  
-  </ion-card>
+    <ion-card-content class="News" >
+        <ion-item>
+            
+       <img src='{{img}}'><br>
+             <p>{{text}}</p> <br>
+              {{description}}
+        </ion-item>
+    </ion-card-content>
 
 </ion-content>

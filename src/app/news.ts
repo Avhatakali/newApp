@@ -1,11 +1,14 @@
 export class news{
 
-    auther:String;
+    author:String;
+    title:string;
+    description:string;
     
 
-    constructor(auther:String)
+    constructor(author:String, title:string,  description:string)
     {
-           this.auther = auther;
-         
+           this.author = author;
+           this.title = title;
+           this.description = description;    
     }
 }
