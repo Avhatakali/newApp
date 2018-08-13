@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { NewsProvider } from '../../providers/news/news';
 import newsArr from '../../app/newsArr';
-import { news } from '../../app/news';
-import arrSports from '../../app/arrSports';
+import { NewsProvider } from '../../providers/news/news';
 import arrFind from '../../app/arrayLocate';
 
 
 /**
- * Generated class for the NewsReaderPage page.
+ * Generated class for the BusinessDisplayPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -16,11 +14,10 @@ import arrFind from '../../app/arrayLocate';
 
 @IonicPage()
 @Component({
-  selector: 'page-news-reader',
-  templateUrl: 'news-reader.html',
+  selector: 'page-business-display',
+  templateUrl: 'business-display.html',
 })
-export class NewsReaderPage {
-
+export class BusinessDisplayPage {
   u;
   sports;
   img;
@@ -35,13 +32,12 @@ export class NewsReaderPage {
   Arr = newsArr;
 
   constructor(public navCtrl: NavController, 
-    public navParams: NavParams, 
-    private NewsProvider:NewsProvider) { 
+    public navParams: NavParams,
+    private NewsProvider:NewsProvider) {
       this.u = this.navParams.get('obj');
       console.log(this.u);
-      
 
-      this.NewsProvider.getMessages(this.newsArr).then((data: any) => {
+      this.NewsProvider.getBusiness(this.newsArr).then((data: any) => {
 
         console.log(data);
         console.log(arrFind);
@@ -53,12 +49,10 @@ export class NewsReaderPage {
         this.description = this.dt[this.u].description;
         console.log(this.text+" "+this.img);
          });      
-        
-     }
+  }
 
-     
-    ionViewLoad(){
-      
-        }
-    }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad BusinessDisplayPage');
+  }
 
+}

@@ -37,11 +37,10 @@ export class MyApp {
       { title: 'Africa', component: AfricaPage },
       { title: 'world', component: WorldPage },
       { title: 'Sports', component: SportsPage },
-      { title: 'Politics', component: PoliticsPage },
+      // { title: 'Politics', component: PoliticsPage },
       { title: 'Business', component: BusinessPage },
-      { title: 'video', component: NewsVidzPage },
+      // { title: 'video', component: NewsVidzPage },
      
-
     ];
 
   }

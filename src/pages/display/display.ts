@@ -22,14 +22,39 @@ import { news } from '../../app/news';
 
 export class DisplayPage {
 
-
-  
+  u;
+  sports;
+  img;
+  dt;
+  title;
+  text;
+  date;
+  description;
+  url;
+  newsArr = [];
+  index;
+  Arr = newsArr;
 
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private NewsProvider:NewsProvider) {
-  
+    
+      this.u = this.navParams.get('obj');
+      console.log(this.u);
+
+      this.NewsProvider.getSports(this.newsArr).then((data: any) => {
+
+        console.log(data);
+        console.log(arrFind);
+        this.dt = data.articles;
+    
+        this.img = this.dt[this.u].urlToImage;
+        this.text = this.dt[this.u].title;
+        this.date = this.dt[this.u].publishedAt;
+        this.description = this.dt[this.u].description;
+        console.log(this.text+" "+this.img);
+         });        
     }
 
     ionViewLoad(){

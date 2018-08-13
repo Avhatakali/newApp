@@ -1,30 +1,18 @@
 page-home {
+    padding: 0px;
+    margin: 0px;
 
-    .headings{
-        font-size: 16px bold black;
-    }
+    .btn{  
+        color:  #488aff;
+        background-color: white;
+        }
 
-    
+        .Headlines{
+            padding: 0px;
+        }
 
-    .clearfix{
-        width: 100%;
-    }
-
-    .img{
-        padding: 4px;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-
-    .Headlines{
-       
-
-    }
-    
-    .Headlines:hover{
-
-    background-color: aliceblue;
-    }    
+    .header{
+        margin-left: -10px ;
+    }   
 
 }

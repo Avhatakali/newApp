@@ -5,6 +5,7 @@ import arrFind from '../../app/arrayLocate';
 import { NewsReaderPage } from '../news-reader/news-reader';
 import newsArr from '../../app/newsArr';
 import arrSports from '../../app/arrSports';
+import { DisplayPage } from '../display/display';
 
 
 /**
@@ -56,13 +57,13 @@ export class SportsPage {
     console.log('ionViewDidLoad SportsPage');
   }
 
-  more1(sports){
+  more(u){
 
-    console.log(sports);
-      arrSports.splice(0,1,sports);
+    console.log(u);
+      arrSports.splice(0,1,u);
 
-      if(arrSports != null){
-      this.navCtrl.push(NewsReaderPage, {obj:sports});
+      if(arrFind != null){
+      this.navCtrl.push(DisplayPage, {obj:u});
       
        }
     }  

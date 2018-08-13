@@ -21,6 +21,7 @@ import { SportsPage } from '../pages/sports/sports';
 import { WorldPage } from '../pages/world/world';
 import { AfricaPage } from '../pages/africa/africa';
 import { BusinessPage } from '../pages/business/business';
+import { BusinessDisplayPage } from '../pages/business-display/business-display';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { BusinessPage } from '../pages/business/business';
     SportsPage,
     WorldPage,
     AfricaPage,
-    BusinessPage
+    BusinessPage,
+    BusinessDisplayPage
     
   ],
   imports: [
@@ -59,7 +61,8 @@ import { BusinessPage } from '../pages/business/business';
     SportsPage,
     WorldPage,
     AfricaPage,
-    BusinessPage
+    BusinessPage,
+    BusinessDisplayPage
 
   ],
   providers: [

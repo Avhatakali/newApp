@@ -13,19 +13,16 @@
 
 
 <ion-content padding>
-    <ion-card-content class="Headlines" *ngFor="let i of newsArr, let u = index">
-        <ion-item>
-            <h4 item-right clear class="headings">
-              {{i.title}}
-              {{i.decription}}
-            <p> {{i.publishedAt}} 
-                <button ion-button (click)="more(u)">readmore</button>
-            </p>
-            </h4> 
-          
-          <ion-thumbnail style="width: 45px; height: 30px;">   
-                <img src= "{{i.urlToImage}}">
-          </ion-thumbnail>
+        <ion-item class="Headlines" *ngFor="let i of newsArr, let u = index">
+                <ion-card-header item-end class="header" >
+                        {{i.title}}   <br>
+                       <p> {{i.publishedAt}} 
+                          <button class="btn" (click)="more(u)">readmore</button>
+                       </p>
+                </ion-card-header>
+                    
+                <ion-thumbnail item-start>
+                      <img src= "{{i.urlToImage}}">
+                </ion-thumbnail>
         </ion-item>
-    </ion-card-content>
 </ion-content>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
 import arrFind from '../../app/arrayLocate';
 import { NewsReaderPage } from '../news-reader/news-reader';
+import { BusinessDisplayPage } from '../business-display/business-display';
 
 
 /**
@@ -59,7 +60,7 @@ export class BusinessPage {
       arrFind.splice(0,1,u);
 
       if(arrFind != null){
-      this.navCtrl.push(NewsReaderPage, {obj:u});
+      this.navCtrl.push(BusinessDisplayPage, {obj:u});
       
        }
     }  
